@@ -30,7 +30,7 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-POST /deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfigurationId}/assign
+POST /deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfigurationId}/microsoft.graph.managedDeviceMobileAppConfiguration/assign
 ```
 
 ## Request headers
@@ -58,7 +58,7 @@ If successful, this action returns a `204 No Content` response code.
 ### Request
 Here is an example of the request.
 ``` http
-POST https://graph.microsoft.com/v1.0/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfigurationId}/assign
+POST https://graph.microsoft.com/v1.0/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfigurationId}/microsoft.graph.managedDeviceMobileAppConfiguration/assign
 
 Content-type: application/json
 Content-length: 287
@@ -66,10 +66,8 @@ Content-length: 287
 {
   "assignments": [
     {
-      "@odata.type": "#microsoft.graph.managedDeviceMobileAppConfigurationAssignment",
-      "id": "4df81c9c-1c9c-4df8-9c1c-f84d9c1cf84d",
       "target": {
-        "@odata.type": "microsoft.graph.allLicensedUsersAssignmentTarget"
+        "@odata.type": "microsoft.graph.allDevicesAssignmentTarget"
       }
     }
   ]
